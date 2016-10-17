@@ -3,6 +3,8 @@ services:
 
     storage:
         image: busybox
+        volumes:
+            - ./data:/data
 
     mysql:
         image: mysql:latest
@@ -25,11 +27,10 @@ services:
 
     # this definition has linked volumes so we can work on the scripts
     humble:
-        build: ../../image
+        image: marcopeg/humble
         volumes_from:
             - storage
         env_file:
             - .env
-        volumes:
-            - ./data:/data
-            - ../../image/scripts:/scripts
+        volumes_from:
+            - storage
