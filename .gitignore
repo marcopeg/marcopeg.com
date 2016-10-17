@@ -1,2 +1,3 @@
 data/backup/development.*
 data/dev-*
+!.env
