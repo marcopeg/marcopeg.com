@@ -1,0 +1,12 @@
+
+# Wordpress for Development
+# by @24HR
+
+FROM wordpress:latest
+
+# Database default settings
+RUN sed -i "s/define('DB_CHARSET', 'utf8');/\/\/define('DB_CHARSET', 'utf8');/g" /usr/src/wordpress/wp-config-sample.php
+RUN sed -i "s/define('DB_COLLATE', '');/\/\/define('DB_COLLATE', '');/g" /usr/src/wordpress/wp-config-sample.php
+
+# Enable wordpress refetching the theme
+RUN sed -i "s/opcache.revalidate_freq=60/opcache.revalidate_freq=0/g" /usr/local/etc/php/conf.d/opcache-recommended.ini

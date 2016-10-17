@@ -1,0 +1,25 @@
+version: '2'
+services:
+
+    storage:
+        volumes:
+            - ./data/dev-mysql-data:/var/lib/mysql
+            - ./data/dev-wp-content:/var/www/html/wp-content
+            - ./services/wordpress/wp-content/themes/docker:/var/www/html/wp-content/themes/docker
+
+    wordpress:
+        build:
+            context: ./services/wordpress/
+            dockerfile: Dockerfile.development
+        ports:
+            - 8080:80
+
+    pma:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - mysql:db
+        ports:
+            - 8081:80
+        environment:
+            - PMA_USER=root
+            - PMA_PASSWORD=root
