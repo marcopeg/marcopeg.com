@@ -3,6 +3,7 @@
 # by @24HR
 
 FROM wordpress:latest
+ADD uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 # Add custom theme
 VOLUME /var/www/html/wp-content/themes/docker

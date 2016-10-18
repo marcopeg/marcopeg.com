@@ -3,6 +3,7 @@
 # by @24HR
 
 FROM wordpress:latest
+ADD uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 # Database default settings
 RUN sed -i "s/define('DB_CHARSET', 'utf8');/\/\/define('DB_CHARSET', 'utf8');/g" /usr/src/wordpress/wp-config-sample.php
