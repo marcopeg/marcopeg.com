@@ -1,0 +1,19 @@
+/*
+Theme Name: MarcoPeg
+Author: Marco Pegoraro
+Description: My beautiful blog's theme
+Version: 0.0.1
+Tags: bootstrap
+*/
+
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+$bg: #fafafa;
+$fg: #333;
+
+*, * * {
+    background: $bg;
+    color: $fg;
+    font-family: Verdana;
+
+}

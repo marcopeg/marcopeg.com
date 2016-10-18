@@ -6,6 +6,7 @@ services:
             - ./data/dev-mysql-data:/var/lib/mysql
             - ./data/dev-wp-content:/var/www/html/wp-content
             - ./services/wordpress/wp-content/themes/docker:/var/www/html/wp-content/themes/docker
+            - ./services/assets:/usr/src/app
 
     wordpress:
         build:
@@ -13,6 +14,16 @@ services:
             dockerfile: Dockerfile.development
         ports:
             - 8080:80
+
+    assets:
+        image: marcopeg/node
+        volumes_from:
+            - storage
+        environment:
+            - BUILD_TARGET=/var/www/html/wp-content/themes/docker
+        entrypoint:
+            - npm
+            - start
 
     pma:
         image: phpmyadmin/phpmyadmin
