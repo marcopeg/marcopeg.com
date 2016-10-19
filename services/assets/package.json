@@ -1,0 +1,20 @@
+{
+  "name": "theme-assets",
+  "version": "1.0.0",
+  "description": "Builder for wordpress custom theme assets",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install && npm run build && npm run build:watch",
+    "build": "./node_modules/.bin/gulp",
+    "build:watch": "./node_modules/.bin/gulp default:watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
