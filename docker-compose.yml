@@ -2,12 +2,12 @@ version: '2'
 services:
 
     storage:
-        image: busybox
+        image: busybox:1.25
         volumes:
             - ./data:/data
 
     mysql:
-        image: mysql:latest
+        image: mysql:5.7
         volumes_from:
             - storage
         environment:
@@ -27,7 +27,7 @@ services:
 
     # this definition has linked volumes so we can work on the scripts
     humble:
-        image: marcopeg/humble
+        image: marcopeg/humble:0.1
         volumes_from:
             - storage
         env_file:

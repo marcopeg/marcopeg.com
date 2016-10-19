@@ -16,7 +16,7 @@ services:
             - 8080:80
 
     assets:
-        image: marcopeg/node
+        image: marcopeg/node:0.1
         volumes_from:
             - storage
         environment:
@@ -26,7 +26,7 @@ services:
             - start
 
     pma:
-        image: phpmyadmin/phpmyadmin
+        image: phpmyadmin/phpmyadmin:4.6.4-1
         links:
             - mysql:db
         ports:

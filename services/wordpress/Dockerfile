@@ -2,7 +2,7 @@
 # Wordpress for Production
 # by @24HR
 
-FROM wordpress:latest
+FROM wordpress:4.6
 ADD uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 # Add custom theme
