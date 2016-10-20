@@ -23,13 +23,13 @@ fi
 
 mkdir -p "$BACKUP_ROOT/$BACKUP_TARGET"
 
-[ "$PRINT_FEEDBACK" == "yes" ] && echo "wp-uploads..."
+echo "wp-uploads..."
 ./humble utils fs-dump      storage://var/www/html/wp-content/uploads       $BACKUP_TARGET/wp-uploads       --now >/dev/null 2>/dev/null
 
-[ "$PRINT_FEEDBACK" == "yes" ] && echo "wp-plugins..."
+echo "wp-plugins..."
 ./humble utils fs-dump      storage://var/www/html/wp-content/plugins       $BACKUP_TARGET/wp-plugins       --now >/dev/null 2>/dev/null
 
-[ "$PRINT_FEEDBACK" == "yes" ] && echo "mysql-db..."
+echo "database..."
 ./humble utils mysql-dump   mysql://wordpress                               $BACKUP_TARGET/mysql-db         --now >/dev/null 2>/dev/null
 
 if [ "$PRINT_FEEDBACK" == "yes" ]; then
