@@ -27,11 +27,11 @@ if [ "$PRINT_FEEDBACK" == "yes" ]; then
     echo ""
 fi
 
-[ "$PRINT_FEEDBACK" == "yes" ] && echo "restore local backup..."
-./humble run restore $SEED_SOURCE       --now >/dev/null 2>/dev/null
+echo "restore from local backup..."
+./humble run restore $SEED_SOURCE       --now
 
-[ "$PRINT_FEEDBACK" == "yes" ] && echo "migrate database..."
-./humble run wp-migrate                 --now >/dev/null 2>/dev/null
+echo "migrate database..."
+./humble run wp-migrate                 --now
 
 if [ "$PRINT_FEEDBACK" == "yes" ]; then
     echo ""

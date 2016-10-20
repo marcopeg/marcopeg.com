@@ -8,7 +8,7 @@ const stylesSource = path.join(sourceFolder, '*.scss');
 const buildTarget = process.env.BUILD_TARGET || path.join(__dirname, 'build');
 
 console.log("***********************");
-console.log(buildTarget);
+console.log("ASSETS BUILD TO:", buildTarget);
 console.log("***********************");
 
 gulp.task('styles', function(){
