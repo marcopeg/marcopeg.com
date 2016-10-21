@@ -5,11 +5,19 @@
 
     &__headline {
         margin-bottom: 4rem auto;
+        font-size: ($font-size-h1 * 1.5);
     }
 
-    &__description {
+    &__content {
+        margin: 8rem;
         font-size: $font-size-large;
         line-height: ($line-height-base * 1.3);
+
+        em {
+            display: block;
+            margin-bottom: -45px;
+        }
+
         small {
             font-size: $font-size-small;
         }

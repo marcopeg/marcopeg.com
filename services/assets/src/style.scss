@@ -10,7 +10,12 @@ Tags: bootstrap
  * Boostrap Customization
  */
 
-$font-family-sans-serif:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// Core variables and mixins
+@import "./bootstrap-variables";
+
+// Extensions
+$brand-secondary: #f5b11d;
+
 
 
 
@@ -18,8 +23,6 @@ $font-family-sans-serif:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !
  * Boostrap Modules
  */
 
-// Core variables and mixins
-@import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
 // Reset and dependencies
@@ -77,3 +80,5 @@ $font-family-sans-serif:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !
 
 @import "./font-lato";
 @import "./blog-intro";
+@import "./post-list-item";
+@import "./post-date";

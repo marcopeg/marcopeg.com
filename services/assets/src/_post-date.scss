@@ -1,0 +1,27 @@
+
+$color: $brand-secondary;
+
+.post-date {
+    text-align: center;
+
+    &__month, &__day, &__year {
+        display: block;
+    }
+
+    &__month {
+        color: $color;
+        height: 1rem;
+    }
+
+    &__day {
+        margin: 1rem auto;
+        font-size: $font-size-h2;
+        line-height: $headings-line-height;
+        font-weight: $headings-font-weight;
+    }
+
+    &__year {
+        background: $color;
+        color: #fff;
+    }
+}

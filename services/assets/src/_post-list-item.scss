@@ -1,0 +1,24 @@
+
+.post-list-item {
+    position: relative;
+    border: 1px solid $gray-lighter;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+
+    &__author {
+        height: 1rem;
+        color: $gray-light;
+    }
+
+    &__headline {
+        margin: 1rem auto;
+
+        a {
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+}

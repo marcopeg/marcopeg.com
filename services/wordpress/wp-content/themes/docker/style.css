@@ -1011,7 +1011,7 @@ body {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #333333;
+  color: #484848;
   background-color: #fff; }
 
 input,
@@ -1023,10 +1023,10 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #337ab7;
+  color: #484848;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #23527c;
+    color: #222222;
     text-decoration: underline; }
   a:focus {
     outline: 5px auto -webkit-focus-ring-color;
@@ -1066,7 +1066,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee; }
+  border-top: 1px solid #eaeaea; }
 
 .sr-only {
   position: absolute;
@@ -1111,7 +1111,7 @@ h1, h2, h3, h4, h5, h6,
   .h6 .small {
     font-weight: normal;
     line-height: 1;
-    color: #777777; }
+    color: #8c8c8c; }
 
 h1, .h1,
 h2, .h2,
@@ -1209,7 +1209,7 @@ mark,
   text-transform: capitalize; }
 
 .text-muted {
-  color: #777777; }
+  color: #8c8c8c; }
 
 .text-primary {
   color: #337ab7; }
@@ -1287,7 +1287,7 @@ a.bg-danger:focus {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee; }
+  border-bottom: 1px solid #eaeaea; }
 
 ul,
 ol {
@@ -1348,7 +1348,7 @@ dd {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #777777; }
+  border-bottom: 1px dotted #8c8c8c; }
 
 .initialism {
   font-size: 90%; }
@@ -1357,7 +1357,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eeeeee; }
+  border-left: 5px solid #eaeaea; }
   blockquote p:last-child,
   blockquote ul:last-child,
   blockquote ol:last-child {
@@ -1368,7 +1368,7 @@ blockquote {
     display: block;
     font-size: 80%;
     line-height: 1.42857;
-    color: #777777; }
+    color: #8c8c8c; }
     blockquote footer:before,
     blockquote small:before,
     blockquote .small:before {
@@ -1378,7 +1378,7 @@ blockquote {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #eeeeee;
+  border-right: 5px solid #eaeaea;
   border-left: 0;
   text-align: right; }
   .blockquote-reverse footer:before,
@@ -1435,7 +1435,7 @@ pre {
   line-height: 1.42857;
   word-break: break-all;
   word-wrap: break-word;
-  color: #333333;
+  color: #484848;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 4px; }
@@ -2259,9 +2259,43 @@ pre {
   margin: 4rem auto;
   text-align: center; }
   .blog-intro__headline {
-    margin-bottom: 4rem auto; }
-  .blog-intro__description {
+    margin-bottom: 4rem auto;
+    font-size: 54px; }
+  .blog-intro__content {
+    margin: 8rem;
     font-size: 18px;
     line-height: 1.85714; }
-    .blog-intro__description small {
+    .blog-intro__content em {
+      display: block;
+      margin-bottom: -45px; }
+    .blog-intro__content small {
       font-size: 12px; }
+
+.post-list-item {
+  position: relative;
+  border: 1px solid #eaeaea;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem; }
+  .post-list-item__author {
+    height: 1rem;
+    color: #8c8c8c; }
+  .post-list-item__headline {
+    margin: 1rem auto; }
+    .post-list-item__headline a:hover {
+      text-decoration: none; }
+
+.post-date {
+  text-align: center; }
+  .post-date__month, .post-date__day, .post-date__year {
+    display: block; }
+  .post-date__month {
+    color: #f5b11d;
+    height: 1rem; }
+  .post-date__day {
+    margin: 1rem auto;
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 500; }
+  .post-date__year {
+    background: #f5b11d;
+    color: #fff; }
