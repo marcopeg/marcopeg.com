@@ -8,15 +8,12 @@
     </head>
     <body class="container">
 
-        <div class="row">
-            <div class="col-xs-12">
-                <h1>
-                    <?php echo get_bloginfo( 'name' ); ?><br>
-                    <small><?php echo get_bloginfo( 'description' ); ?></small>
-                </h1>
+        <div class="blog-intro">
+            <h1 class="blog-intro__headline"><?php echo get_bloginfo( 'name' ); ?></h1>
+            <div class="blog-intro__description">
+                <?php echo html_entity_decode(get_bloginfo( 'description' )); ?>
             </div>
         </div>
-        <hr>
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <div class="row">
