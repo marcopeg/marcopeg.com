@@ -37,7 +37,7 @@ $brand-secondary: #f5b11d;
 @import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/tables";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/forms";
-// @import "bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
 // Components
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
@@ -52,10 +52,10 @@ $brand-secondary: #f5b11d;
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/labels";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/badges";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
-// @import "bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/alerts";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
-// @import "bootstrap-sass/assets/stylesheets/bootstrap/media";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/media";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/list-group";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/panels";
 // @import "bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
@@ -82,3 +82,4 @@ $brand-secondary: #f5b11d;
 @import "./blog-intro";
 @import "./post-list-item";
 @import "./post-date";
+@import "./post";
