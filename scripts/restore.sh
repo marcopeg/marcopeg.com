@@ -30,16 +30,16 @@ if [ "$PRINT_FEEDBACK" == "yes" ]; then
 fi
 
 echo "wp-uploads..."
-./humble utils fs-seed      $RESTORE_SOURCE/wp-uploads.tar.gz     storage://var/www/html/wp-content/uploads     --now >/dev/null 2>/dev/null
+humble utils fs-seed      $RESTORE_SOURCE/wp-uploads.tar.gz     storage://var/www/html/wp-content/uploads     --now >/dev/null 2>/dev/null
 
 echo "wp-plugins..."
-./humble utils fs-seed      $RESTORE_SOURCE/wp-plugins.tar.gz     storage://var/www/html/wp-content/plugins     --now >/dev/null 2>/dev/null
+humble utils fs-seed      $RESTORE_SOURCE/wp-plugins.tar.gz     storage://var/www/html/wp-content/plugins     --now >/dev/null 2>/dev/null
 
 echo "change file owner to www-data..."
-./humble exec wordpress chown -R www-data:www-data wp-content
+humble exec wordpress chown -R www-data:www-data wp-content
 
 echo "import database..."
-./humble utils mysql-seed   $RESTORE_SOURCE/mysql-db.sql.gz       mysql://wordpress                             --now >/dev/null 2>/dev/null
+humble utils mysql-seed   $RESTORE_SOURCE/mysql-db.sql.gz       mysql://wordpress                             --now >/dev/null 2>/dev/null
 
 if [ "$PRINT_FEEDBACK" == "yes" ]; then
     echo ""

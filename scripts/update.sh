@@ -4,6 +4,6 @@
 #
 
 git pull
-./humble stop wordpress
-./humble rm -f wordpress
-./humble up -d --build wordpress
+humble stop wordpress
+humble rm -f wordpress
+humble up -d --build wordpress
