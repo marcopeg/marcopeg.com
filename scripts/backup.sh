@@ -21,16 +21,16 @@ if [ "$PRINT_FEEDBACK" == "yes" ]; then
     echo ""
 fi
 
-mkdir -p "$BACKUP_ROOT/$BACKUP_TARGET"
+mkdir -p "$PROJECT_CWD/$BACKUP_ROOT/$BACKUP_TARGET"
 
 echo "wp-uploads..."
-./humble utils fs-dump      storage://var/www/html/wp-content/uploads       $BACKUP_TARGET/wp-uploads       --now >/dev/null 2>/dev/null
+humble utils fs-dump      storage://var/www/html/wp-content/uploads       $BACKUP_TARGET/wp-uploads       --now >/dev/null 2>/dev/null
 
 echo "wp-plugins..."
-./humble utils fs-dump      storage://var/www/html/wp-content/plugins       $BACKUP_TARGET/wp-plugins       --now >/dev/null 2>/dev/null
+humble utils fs-dump      storage://var/www/html/wp-content/plugins       $BACKUP_TARGET/wp-plugins       --now >/dev/null 2>/dev/null
 
 echo "database..."
-./humble utils mysql-dump   mysql://wordpress                               $BACKUP_TARGET/mysql-db         --now >/dev/null 2>/dev/null
+humble utils mysql-dump   mysql://wordpress                               $BACKUP_TARGET/mysql-db         --now >/dev/null 2>/dev/null
 
 if [ "$PRINT_FEEDBACK" == "yes" ]; then
     echo ""
