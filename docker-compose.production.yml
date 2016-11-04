@@ -3,5 +3,5 @@ services:
 
     storage:
         volumes:
-            - ./data/production/mysql-data:/var/lib/mysql
-            - ./data/production/wp-content:/var/www/html/wp-content
+            - ${HUMBLE_DATA}/production/mysql-data:/var/lib/mysql
+            - ${HUMBLE_DATA}/production/wp-content:/var/www/html/wp-content

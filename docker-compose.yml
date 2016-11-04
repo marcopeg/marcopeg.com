@@ -4,7 +4,8 @@ services:
     storage:
         image: busybox:1.25
         volumes:
-            - ./data:/data
+            - ${HUMBLE_DATA}:/data
+            - ${HUMBLE_BACKUP}:/backup
 
     mysql:
         image: mysql:5.7
@@ -27,7 +28,7 @@ services:
 
     # this definition has linked volumes so we can work on the scripts
     humble:
-        image: marcopeg/humble:0.1.2
+        image: marcopeg/humble:1.0.0
         volumes_from:
             - storage
         env_file:

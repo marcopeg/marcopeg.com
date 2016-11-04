@@ -2,16 +2,6 @@
 # Restore latest available backup for current environment
 #
 
-PRINT_FEEDBACK="yes"
-P3=$3
-
-for last; do true; done
-if [ "--now" == "$last" ]; then
-    PRINT_FEEDBACK="no"
-    [ "$P3" == "$last" ] && P3=""
-fi
-
-BACKUP_DELAY=${BACKUP_DELAY:-3}
 RESTORE_SOURCE=${P3:-$RESTORE_SOURCE}
 if [ "" == "$RESTORE_SOURCE" ]; then
     AVAILABLE_BACKUPS=$(find $BACKUP_ROOT/$HUMBLE_ENV.* -maxdepth 0 -type d)
@@ -22,9 +12,8 @@ fi
 if [ "$PRINT_FEEDBACK" == "yes" ]; then
     echo ""
     echo "====== RESTORE BACKUP ($HUMBLE_ENV) ======"
-    echo "from: backup/$RESTORE_SOURCE"
-    echo "(sleep "$BACKUP_DELAY"s, you can abort now)"
-    sleep $BACKUP_DELAY
+    echo "from: $RESTORE_SOURCE"
+    enterToContinue
     echo ""
     echo ""
 fi
