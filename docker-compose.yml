@@ -28,7 +28,7 @@ services:
 
     # this definition has linked volumes so we can work on the scripts
     humble:
-        image: marcopeg/humble:1.0.0
+        image: marcopeg/humble:2.0.0
         volumes_from:
             - storage
         env_file:

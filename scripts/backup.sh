@@ -20,13 +20,13 @@ if [ "$PRINT_FEEDBACK" == "yes" ]; then
 fi
 
 echo "wp-uploads..."
-humble utils fs-dump      storage://var/www/html/wp-content/uploads       "$BACKUP_TARGET/wp-uploads.tar.gz"        --now >/dev/null 2>/dev/null
+humble do fs-backup      storage://var/www/html/wp-content/uploads       "$BACKUP_TARGET/wp-uploads.tar.gz"        --now >/dev/null 2>/dev/null
 
 echo "wp-plugins..."
-humble utils fs-dump      storage://var/www/html/wp-content/plugins       "$BACKUP_TARGET/wp-plugins.tar.gz"        --now >/dev/null 2>/dev/null
+humble do fs-backup      storage://var/www/html/wp-content/plugins       "$BACKUP_TARGET/wp-plugins.tar.gz"        --now >/dev/null 2>/dev/null
 
 echo "database..."
-humble utils mysql-dump   mysql://wordpress                               "$BACKUP_TARGET/mysql-db"                 --now >/dev/null 2>/dev/null
+humble do mysql-backup   mysql://wordpress                               "$BACKUP_TARGET/mysql-db"                 --now >/dev/null 2>/dev/null
 
 if [ "$PRINT_FEEDBACK" == "yes" ]; then
     echo ""
