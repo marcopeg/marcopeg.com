@@ -2,12 +2,6 @@
 # Perform a Versioned Full Backup
 #
 
-PRINT_FEEDBACK="yes"
-for last; do true; done
-if [ "--now" == "$last" ]; then
-    PRINT_FEEDBACK="no"
-fi
-
 BACKUP_TARGET="$HUMBLE_ENV.$BACKUP_DATE"
 
 if [ "$PRINT_FEEDBACK" == "yes" ]; then
