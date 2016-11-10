@@ -35,7 +35,7 @@ if [ "$IS_WP_INSTALL" != "-1" ]; then
     echo ""
     echo "Wordpress: install page detected,"
     echo "Run seeding script..."
-    humble run seed
+    humble seed --now
 fi
 
 echo ""
