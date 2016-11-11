@@ -26,7 +26,6 @@ services:
         environment:
             - WORDPRESS_DB_PASSWORD=root
 
-    # this definition has linked volumes so we can work on the scripts
     humble:
         image: marcopeg/humble:2.0.0
         volumes_from:
