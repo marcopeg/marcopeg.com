@@ -5,3 +5,9 @@ services:
         volumes:
             - ${HUMBLE_DATA}/production/mysql-data:/var/lib/mysql
             - ${HUMBLE_DATA}/production/wp-content:/var/www/html/wp-content
+
+    mysql:
+        restart: always
+
+    wordpress:
+        restart: always
