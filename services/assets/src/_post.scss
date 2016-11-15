@@ -18,7 +18,6 @@
         h2 {
             font-size: 18px;
             color: $gray-light;
-            margin-top: 0;
         }
         img {
             margin-bottom: 2em;
@@ -49,8 +48,24 @@
         font-size: 20px;
         line-height: 1.8em;
 
+        h2 {
+            margin-top: 2em;
+            padding-left: 0.5em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid $gray-lighter;
+
+            & + p {
+                margin-top: 0;
+            }
+        }
+
         p {
             margin: 1em auto;
+        }
+
+        a:hover {
+            background: $link-hover-color;
+            color: #fff;
         }
 
         blockquote {
