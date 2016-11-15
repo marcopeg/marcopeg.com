@@ -6,6 +6,10 @@
     &__headline {
         margin-bottom: 4rem auto;
         font-size: ($font-size-h1 * 1.5);
+
+        a {
+            color: $text-color;
+        }
     }
 
     &__content {

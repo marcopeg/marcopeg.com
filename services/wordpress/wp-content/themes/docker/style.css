@@ -1023,11 +1023,11 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #484848;
+  color: #337ab7;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #222222;
-    text-decoration: underline; }
+    color: #23527c;
+    text-decoration: none; }
   a:focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
@@ -2236,7 +2236,7 @@ fieldset[disabled] a.btn {
     background-color: #fff; }
 
 .btn-link {
-  color: #484848;
+  color: #337ab7;
   font-weight: normal;
   border-radius: 0; }
   .btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled],
@@ -2247,8 +2247,8 @@ fieldset[disabled] a.btn {
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   .btn-link:hover, .btn-link:focus {
-    color: #222222;
-    text-decoration: underline;
+    color: #23527c;
+    text-decoration: none;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus,
   fieldset[disabled] .btn-link:hover,
@@ -2311,7 +2311,7 @@ input[type="button"].btn-block {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #484848; }
+  border-color: #337ab7; }
 
 .media {
   margin-top: 15px; }
@@ -2649,6 +2649,8 @@ a.thumbnail.active {
   .blog-intro__headline {
     margin-bottom: 4rem auto;
     font-size: 54px; }
+    .blog-intro__headline a {
+      color: #484848; }
   .blog-intro__content {
     margin: 8rem;
     font-size: 18px;
@@ -2669,8 +2671,10 @@ a.thumbnail.active {
     color: #8c8c8c; }
   .post-list-item__headline {
     margin: 1rem auto; }
-    .post-list-item__headline a:hover {
-      text-decoration: none; }
+    .post-list-item__headline a {
+      color: #484848; }
+      .post-list-item__headline a:hover {
+        text-decoration: none; }
 
 .post-date {
   text-align: center; }
@@ -2701,8 +2705,7 @@ a.thumbnail.active {
     margin-bottom: 0.25em; }
   .post__headline h2 {
     font-size: 18px;
-    color: #8c8c8c;
-    margin-top: 0; }
+    color: #8c8c8c; }
   .post__headline img {
     margin-bottom: 2em;
     max-width: 100px;
@@ -2723,8 +2726,18 @@ a.thumbnail.active {
     font-family: Lato;
     font-size: 20px;
     line-height: 1.8em; }
+    .post__content h2 {
+      margin-top: 2em;
+      padding-left: 0.5em;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid #eaeaea; }
+      .post__content h2 + p {
+        margin-top: 0; }
     .post__content p {
       margin: 1em auto; }
+    .post__content a:hover {
+      background: #23527c;
+      color: #fff; }
     .post__content blockquote {
       border-left: 4px solid #55595c;
       margin-left: -1em;
