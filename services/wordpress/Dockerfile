@@ -3,7 +3,9 @@
 # by @24HR
 
 FROM wordpress:4.6
-ADD uploads.ini /usr/local/etc/php/conf.d/uploads.ini
+ADD conf/mpm_prefork.conf /etc/apache2/mods-enabled/
+ADD conf/apache2.conf /etc/apache2/apache2.conf
+ADD conf/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 # Add custom theme
 VOLUME /var/www/html/wp-content/themes/docker

@@ -12,8 +12,6 @@ services:
         build:
             context: ./services/wordpress/
             dockerfile: Dockerfile.development
-        ports:
-            - 8080:80
 
     assets:
         image: marcopeg/node:0.1
@@ -30,7 +28,7 @@ services:
         links:
             - mysql:db
         ports:
-            - 8081:80
+            - ${PMA_PORT}:80
         environment:
             - PMA_USER=root
             - PMA_PASSWORD=root

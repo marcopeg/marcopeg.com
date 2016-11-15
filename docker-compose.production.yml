@@ -9,9 +9,9 @@ services:
     mysql:
         volumes:
             - ./services/mysql/my.cnf:/etc/mysql/my.cnf
-        mem_limit: 25m
+        mem_limit: ${MEM_LIMIT_MYSQL}
         restart: always
 
     wordpress:
-        mem_limit: 50m
+        mem_limit: ${MEM_LIMIT_APACHE}
         restart: always
