@@ -2,7 +2,7 @@
 # Environment Seeding
 #
 
-SEED_SOURCE=${P3:-$SEED_SOURCE}
+SEED_SOURCE=${P2:-$SEED_SOURCE}
 if [ "" == "$SEED_SOURCE" ]; then
     SEED_SOURCE="seed-$HUMBLE_ENV"
 fi

@@ -2739,18 +2739,28 @@ a.thumbnail.active {
       background: #23527c;
       color: #fff; }
     .post__content blockquote {
-      border-left: 4px solid #55595c;
-      margin-left: -1em;
-      padding-left: 1em;
+      margin: 1em auto;
       font-style: italic;
       color: #000;
       font-size: 20px; }
+      .post__content blockquote p:first-child {
+        margin-top: 0; }
     .post__content img {
       margin: 4em auto; }
       .post__content img.aligncenter {
         display: block;
         margin-left: auto;
         margin-right: auto; }
+    .post__content .style1 blockquote {
+      border-left: 0px solid #55595c;
+      margin-left: 2em;
+      margin-right: 2em;
+      padding-left: 0;
+      color: black; }
+      .post__content .style1 blockquote small {
+        font-size: 0.75em; }
+      .post__content .style1 blockquote strong {
+        color: #484848; }
     .post__content .style2 blockquote {
       border-left: 0px solid #55595c;
       margin-left: 0;
@@ -2758,6 +2768,31 @@ a.thumbnail.active {
       text-align: center;
       font-size: 2em;
       line-height: 1.5em; }
+      .post__content .style2 blockquote small {
+        font-size: 0.6em; }
+        .post__content .style2 blockquote small:before {
+          display: none; }
+    .post__content .style3 blockquote {
+      border-left: 0px solid #55595c;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: center;
+      font-size: 2em;
+      line-height: 1.5em; }
+      .post__content .style3 blockquote small {
+        font-size: 0.6em; }
+        .post__content .style3 blockquote small:before {
+          display: none; }
+      .post__content .style3 blockquote:before {
+        display: block;
+        content: '';
+        border-top: 4px solid #8c8c8c;
+        margin-bottom: 1em; }
+      .post__content .style3 blockquote:after {
+        display: block;
+        content: '';
+        border-bottom: 4px solid #8c8c8c;
+        margin-top: 1em; }
   .post__close-btn {
     position: fixed;
     top: 5px;
