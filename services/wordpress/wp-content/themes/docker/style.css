@@ -2762,3 +2762,5 @@ a.thumbnail.active {
     z-index: 999999; }
     .post__close-btn:hover {
       background-color: #eaeaea; }
+  .post__comments {
+    margin-top: 8rem; }

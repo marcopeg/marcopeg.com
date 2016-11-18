@@ -30,6 +30,12 @@
         <div class="post__content">
             <?php the_content() ?>
         </div>
+
+        <?php if ( comments_open() || get_comments_number() ) : ?>
+            <div class="post__comments">
+                <?php comments_template() ?>
+            </div>
+        <?php endif; ?>
     </div>
 <?php endwhile; endif;?>
 
