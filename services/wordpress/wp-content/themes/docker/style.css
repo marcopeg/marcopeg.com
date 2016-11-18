@@ -2751,6 +2751,13 @@ a.thumbnail.active {
         display: block;
         margin-left: auto;
         margin-right: auto; }
+    .post__content .style2 blockquote {
+      border-left: 0px solid #55595c;
+      margin-left: 0;
+      padding-left: 0;
+      text-align: center;
+      font-size: 2em;
+      line-height: 1.5em; }
   .post__close-btn {
     position: fixed;
     top: 5px;
@@ -2762,3 +2769,5 @@ a.thumbnail.active {
     z-index: 999999; }
     .post__close-btn:hover {
       background-color: #eaeaea; }
+  .post__comments {
+    margin-top: 8rem; }
