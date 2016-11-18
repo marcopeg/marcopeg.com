@@ -69,12 +69,15 @@
         }
 
         blockquote {
-            border-left: 4px solid #55595c;
-            margin-left: -1em;
-            padding-left: 1em;
+            margin: 1em auto;
+
             font-style: italic;
             color: #000;
             font-size: 20px;
+
+            p:first-child {
+                margin-top: 0;
+            }
         }
 
         img {
@@ -86,6 +89,25 @@
             }
         }
 
+        .style1 {
+            blockquote {
+                border-left: 0px solid #55595c;
+                margin-left: 2em;
+                margin-right: 2em;
+                padding-left: 0;
+
+                color: black;
+
+                small {
+                    font-size: 0.75em;
+                }
+
+                strong {
+                    color: $gray-dark;
+                }
+            }
+        }
+
         .style2 {
             blockquote {
                 border-left: 0px solid #55595c;
@@ -94,6 +116,43 @@
                 text-align: center;
                 font-size: 2em;
                 line-height: 1.5em;
+                small {
+                    font-size: 0.6em;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .style3 {
+            blockquote {
+                border-left: 0px solid #55595c;
+                margin-left: 0;
+                padding-left: 0;
+                text-align: center;
+                font-size: 2em;
+                line-height: 1.5em;
+
+                small {
+                    font-size: 0.6em;
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                &:before {
+                    display: block;
+                    content: '';
+                    border-top: 4px solid $gray-light;
+                    margin-bottom: 1em;
+                }
+                &:after {
+                    display: block;
+                    content: '';
+                    border-bottom: 4px solid $gray-light;
+                    margin-top: 1em;
+                }
             }
         }
 
