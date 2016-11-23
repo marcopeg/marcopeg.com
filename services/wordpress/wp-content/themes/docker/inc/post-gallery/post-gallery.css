@@ -1,0 +1,11 @@
+/**
+ * PostGallery
+ */
+
+#post-gallery ul {}
+
+#post-gallery ul li {
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
