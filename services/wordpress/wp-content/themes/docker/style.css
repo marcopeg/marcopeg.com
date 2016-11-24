@@ -2675,6 +2675,8 @@ a.thumbnail.active {
       color: #484848; }
       .post-list-item__headline a:hover {
         text-decoration: none; }
+    .post-list-item__headline--nomargin {
+      margin-top: 0; }
 
 .post-date {
   text-align: center; }

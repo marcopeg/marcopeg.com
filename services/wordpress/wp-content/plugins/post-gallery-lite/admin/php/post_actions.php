@@ -4,6 +4,11 @@ add_action( 'add_meta_boxes', 'post_gallery_lite_register_meta_box' );
 add_action( 'save_post', 'post_gallery_lite_post_save' );
 
 function post_gallery_lite_register_meta_box() {
+
+    if (post_gallery_lite_is_disabled()) {
+        return;
+    }
+
     add_meta_box(
         'post_gallery_lite_post_meta_box',
         'PostGalleryLite',
@@ -32,6 +37,7 @@ function post_gallery_lite_enqueue_admin_scripts() {
 
 // forces to save the updated photo gallery serialization string
 function post_gallery_lite_post_save( $post_id ) {
-    $ids = post_gallery_lite_explode_ids($_POST[POST_GALLERY_LITE_FNAME . '_update']);
+    $next_ids = $_POST[POST_GALLERY_LITE_FNAME . '_update'];
+    $ids = post_gallery_lite_explode_ids($next_ids);
     post_gallery_lite_serialize($post_id, $ids);
 }

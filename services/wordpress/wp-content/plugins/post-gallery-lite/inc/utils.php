@@ -1,6 +1,12 @@
 <?php
 define('POST_GALLERY_LITE_FNAME', 'post_gallery_lite');
 
+// Only gallery post formats have post-galleries
+function post_gallery_lite_is_disabled() {
+    global $post;
+    return get_post_format($post->ID) != 'gallery';
+}
+
 function post_gallery_lite_filter_not_empty($val) {
     return !empty($val);
 }
@@ -40,7 +46,8 @@ function post_gallery_lite_serialize($gid, $ids) {
     }
 
     if ($result == false) {
-        wp_send_json_error($result);
+        // wp_send_json_error($result);
+        return false;
     } else {
         return true;
     }

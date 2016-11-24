@@ -2,6 +2,11 @@
 add_shortcode( 'post_gallery_lite', 'post_gallery_lite_short_code' );
 
 function post_gallery_lite_short_code( $atts ) {
+
+    if (post_gallery_lite_is_disabled()) {
+        return;
+    }
+
     global $post;
     global $post_gallery_lite;
     global $post_gallery_lite_attributes;
