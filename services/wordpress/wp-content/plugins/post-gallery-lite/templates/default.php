@@ -15,9 +15,7 @@ wp_enqueue_style( 'post-gallery-lite-template-default', $css_url, array(), POST_
 <ul class="post-gallery-lite post-gallery-lite--default">
 <?php foreach ( $post_gallery_lite as $image ): ?>
     <li class="post-gallery-lite__item post-gallery-lite__item--default">
-        <a href="<?php echo $image['src'] ?>" data-lightbox="<?php echo $atts['lightbox-group'] ?>">
-            <img src="<?php echo $image['thumb'] ?>" />
-        </a>
+        <img src="<?php echo $image['src'] ?>" />
     </li>
 <?php endforeach; ?>
 </ul>

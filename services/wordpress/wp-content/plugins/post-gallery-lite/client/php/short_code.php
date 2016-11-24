@@ -1,11 +1,13 @@
 <?php
 add_shortcode( 'post_gallery_lite', 'post_gallery_lite_short_code' );
 
-function post_gallery_lite_short_code( $post_gallery_lite_original_attributes ) {
+function post_gallery_lite_short_code( $atts ) {
     global $post;
     global $post_gallery_lite;
     global $post_gallery_lite_attributes;
     global $post_gallery_lite_original_attributes;
+
+    $post_gallery_lite_original_attributes = $atts;
 
     $post_gallery_lite_attributes = shortcode_atts(array(
         'template' => 'default',
