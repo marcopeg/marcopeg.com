@@ -14,6 +14,11 @@ function post_gallery_lite_short_code( $post_gallery_lite_original_attributes ) 
     $ids = post_gallery_lite_unserialize($post->ID);
     $post_gallery_lite = post_gallery_lite_fetch_images($ids);
 
+    // don't try to render an empty gallery
+    if (empty($post_gallery_lite)) {
+        return '';
+    }
+
     ob_start();
     post_gallery_lite_render_template($post_gallery_lite_attributes['template']);
     return ob_get_clean();

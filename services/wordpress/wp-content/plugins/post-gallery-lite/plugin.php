@@ -37,5 +37,6 @@ if (is_admin()) {
     require_once('admin/php/post_actions.php');
     require_once('admin/php/ajax_actions.php');
 } else {
+    require_once('client/php/client_actions.php');
     require_once('client/php/short_code.php');
 }
