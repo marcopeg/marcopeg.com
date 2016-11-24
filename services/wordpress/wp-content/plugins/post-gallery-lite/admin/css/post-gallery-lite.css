@@ -2,9 +2,9 @@
  * PostGallery
  */
 
-#post-gallery ul {}
+#post-gallery-lite ul {}
 
-#post-gallery ul li {
+#post-gallery-lite ul li {
     float: left;
     margin-right: 10px;
     margin-left: 10px;

@@ -1,7 +1,6 @@
 <?php
 
 include_once('advanced-custom-fields/general-post.php');
-include_once('inc/post-gallery/functions.php');
 
 add_theme_support( 'title-tag' );
 

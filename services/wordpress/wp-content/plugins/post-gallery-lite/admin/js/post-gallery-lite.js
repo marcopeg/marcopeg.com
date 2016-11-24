@@ -1,7 +1,7 @@
 
 ;(function($) {
 
-    $.fn.postGallery = function(settings) {
+    $.fn.postGalleryLite = function(settings) {
         let $this = $(this);
         let $gallery, $addBtn;
 
@@ -23,7 +23,7 @@
         let ajaxAction = (action, data) => new Promise((resolve, reject) => {
             let payload = Object.assign({}, data || {}, {
                 post_id: settings.postId,
-                action: 'post_gallery_' + action,
+                action: 'post_gallery_lite_' + action,
             });
 
             $.ajax({
@@ -34,6 +34,11 @@
                 error: err => reject(err),
                 success: res => {
                     if (res.success === true) {
+
+                        // update cache field
+                        let cache = res.data.map(image => image.id).join(',');
+                        $(settings.cacheField).val(cache);
+
                         resolve(res.data);
                     } else {
                         reject(res.data);
@@ -60,6 +65,7 @@
             resolve();
         });
 
+        // Implements sortable behaviour
         let listRender = images => new Promise((resolve, reject) => {
             if (!images.length) {
                 $gallery.append("<p>[empty gallery, let's add something here!]</p>");
@@ -73,10 +79,8 @@
             });
 
             $list.sortable().on('sortstop', function(e, ui) {
-                let ids = $list.sortable('toArray').map(id => $('#' + id).data('post-gallery-id'));
-
+                let ids = $list.sortable('toArray').map(id => $('#' + id).data('post-gallery-lite-id'));
                 ajaxAction('sort_images', { ids })
-                    .then(data => console.log(data))
                     .catch(err => {
                         alert('Something went wrong, reverting order!');
                         $list.sortable( "cancel" );
@@ -119,7 +123,7 @@
 
         let onDeleteImage = id => ajaxAction('del_image', { image_id: id })
             .then(() => {
-                $('#post-gallery-' + id).fadeOut();
+                $('#post-gallery-lite-' + id).fadeOut();
             })
             .catch(err => console.error(err));
 
@@ -127,8 +131,8 @@
             let $item = $('<div>');
 
             $wrapper = $('<li>')
-                .attr('id', 'post-gallery-' + data.id)
-                .data('post-gallery-id', data.id)
+                .attr('id', 'post-gallery-lite-' + data.id)
+                .data('post-gallery-lite-id', data.id)
                 .on('click', function(e) {
                     onDeleteImage(data.id);
                 });
