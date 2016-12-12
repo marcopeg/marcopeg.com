@@ -5,7 +5,7 @@
 
         <div class="post__headline">
             <a href="<?php echo esc_url( get_permalink() )?>">
-                <?php if (custom_field_has_value('subtitle')): ?>
+                <?php if (custom_field_has_value('image')): ?>
                     <img src="<?php the_custom_field('image') ?>" alt="panic" width="150" height="150" class="aligncenter size-thumbnail wp-image-32 img-circle" />
                 <?php endif; ?>
                 <h1><?php the_title(); ?></h1>
@@ -26,6 +26,14 @@
                     by, <b><?php the_author_full_name() ?></b>
                 </span>
         </div>
+
+        <?php
+        # YouTube responsive video.
+        if (custom_field_has_value('youtube_id')): ?>
+            <div class="post__youtube">
+                <iframe src="http://www.youtube.com/embed/<?php the_custom_field('youtube_id') ?>" frameborder="0" width="560" height="315"></iframe>
+            </div>
+        <?php endif; ?>
 
         <div class="post__content">
             <?php the_content() ?>

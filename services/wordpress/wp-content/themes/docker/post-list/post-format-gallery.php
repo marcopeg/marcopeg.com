@@ -14,7 +14,9 @@ $gallery_images = post_gallery_lite_fetch_images($gallery_ids);
             </div>
             <div class="col-xs-10">
                 <h2 class="post-list-item__headline post-list-item__headline--nomargin">
-                    <a href="<?php echo esc_url( get_permalink() )?>"><?php the_title(); ?></a>
+                    <a href="<?php echo esc_url( get_permalink() )?>" title="<?php the_title(); ?>">
+                        <?php the_title(); ?>
+                    </a>
                 </h2>
                 <div class="post-list-item__content">
                     <?php foreach ( $gallery_images as $image ) : ?>
