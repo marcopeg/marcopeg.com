@@ -8,7 +8,7 @@
                     <span class="post-date__year"><?php the_time('Y') ?></span>
                 </time>
             </div>
-            <div class="col-xs-8">
+            <div class="col-xs-9">
                 <div class="post-list-item__author">
                     <?php the_author_full_name() ?>
                 </div>
@@ -21,7 +21,7 @@
                     <?php is_single() ? the_content() : the_excerpt() ?>
                 </div>
             </div>
-            <div class="col-xs-2">
+            <div class="col-xs-1">
                 <a href="<?php echo esc_url( get_permalink() )?>" title="<?php the_title(); ?>">
                     <img src="<?php echo get_template_directory_uri() . '/images/youtube.png' ?>" alt="YouTUBE Video" class="img-responsive" />
                 </a>
