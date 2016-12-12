@@ -13,7 +13,9 @@
                     <?php the_author_full_name() ?>
                 </div>
                 <h2 class="post-list-item__headline">
-                    <a href="<?php echo esc_url( get_permalink() )?>"><?php the_title(); ?></a>
+                    <a href="<?php echo esc_url( get_permalink() )?>" title="<?php the_title(); ?>">
+                        <?php the_title(); ?>
+                    </a>
                 </h2>
                 <div class="post-list-item__content">
                     <?php is_single() ? the_content() : the_excerpt() ?>
