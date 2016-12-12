@@ -2724,6 +2724,20 @@ a.thumbnail.active {
       width: 55px;
       margin: 1.5em auto;
       border-bottom: 1px solid #777777; }
+  .post__youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden; }
+    .post__youtube iframe,
+    .post__youtube object,
+    .post__youtube embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
   .post__content {
     font-family: Lato;
     font-size: 20px;

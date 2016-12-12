@@ -1,9 +1,10 @@
 <?php
 
 include_once('advanced-custom-fields/general-post.php');
+include_once('advanced-custom-fields/video.php');
 
 add_theme_support( 'title-tag' );
-add_theme_support( 'post-formats', array( 'aside', 'gallery', 'quote', 'status', 'link' ) );
+add_theme_support( 'post-formats', array( 'aside', 'gallery', 'quote', 'status', 'link', 'video' ) );
 
 function the_author_full_name() {
     echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name');
