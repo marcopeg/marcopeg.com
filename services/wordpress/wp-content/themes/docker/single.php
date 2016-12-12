@@ -5,7 +5,7 @@
 
         <div class="post__headline">
             <a href="<?php echo esc_url( get_permalink() )?>">
-                <?php if (custom_field_has_value('subtitle')): ?>
+                <?php if (custom_field_has_value('image')): ?>
                     <img src="<?php the_custom_field('image') ?>" alt="panic" width="150" height="150" class="aligncenter size-thumbnail wp-image-32 img-circle" />
                 <?php endif; ?>
                 <h1><?php the_title(); ?></h1>
