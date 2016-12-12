@@ -27,6 +27,14 @@
                 </span>
         </div>
 
+        <?php
+        # YouTube responsive video.
+        if (custom_field_has_value('youtube_id')): ?>
+            <div class="post__youtube">
+                <iframe src="http://www.youtube.com/embed/<?php the_custom_field('youtube_id') ?>" frameborder="0" width="560" height="315"></iframe>
+            </div>
+        <?php endif; ?>
+
         <div class="post__content">
             <?php the_content() ?>
         </div>
