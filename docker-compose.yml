@@ -21,8 +21,6 @@ services:
         build: ./services/wordpress
         links:
             - mysql:mysql
-        ports:
-            - ${HUMBLE_PORT}:80
         volumes_from:
             - storage
         environment:
