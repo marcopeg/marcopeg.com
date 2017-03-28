@@ -11,6 +11,9 @@ services:
 
     wordpress:
         restart: always
+        # ports:
+        #     - ${HUMBLE_PORT}:80
+
 
     proxy:
         image: nginx

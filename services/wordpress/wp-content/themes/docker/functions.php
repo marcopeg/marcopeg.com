@@ -3,6 +3,7 @@
 include_once('advanced-custom-fields/general-post.php');
 include_once('advanced-custom-fields/video.php');
 
+remove_filter('template_redirect','redirect_canonical');
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'quote', 'status', 'link', 'video' ) );
 
