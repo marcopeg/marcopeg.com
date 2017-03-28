@@ -18,10 +18,13 @@ services:
     proxy:
         image: nginx
         volumes:
-            - ./services/nginx/nginx.conf:/etc/nginx/nginx.conf
-            - ./services/nginx/h5bp:/etc/nginx/h5bp
+            - ./services/nginx/config/nginx.conf:/etc/nginx/nginx.conf
+            - ./services/nginx/config/mime-types.conf:/etc/nginx/mime-types.conf
+            - ./services/nginx/config/h5bp:/etc/nginx/h5bp
             - ${HUMBLE_DATA}/production/proxy-cache:/tmp/nginx
             - ${HUMBLE_DATA}/production/wp-content:/var/www/static/wp-content
+            - ./services/wordpress/wp-content/themes/docker:/var/www/static/wp-content/themes/docker
+            - ./services/wordpress/wp-content/plugins/post-gallery-lite:/var/www/static/wp-content/plugins/post-gallery-lite
         links:
             - wordpress:wordpress
         ports:
