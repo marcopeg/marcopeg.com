@@ -16,10 +16,10 @@ services:
 
 
     proxy:
-        image: nginx
+        image: nginx:1.11
         volumes:
             - ./services/nginx/config/nginx.conf:/etc/nginx/nginx.conf
-            - ./services/nginx/config/mime-types.conf:/etc/nginx/mime-types.conf
+            - ./services/nginx/config/server-configs-nginx:/etc/nginx/server-configs-nginx
             # - ./services/nginx/config/h5bp:/etc/nginx/h5bp
             - ${HUMBLE_DATA}/production/proxy-cache:/tmp/nginx
             - ${HUMBLE_DATA}/production/wp-content:/var/www/static/wp-content
