@@ -12,8 +12,8 @@ VOLUME /var/www/html/wp-content/themes/docker
 ADD ./wp-content/themes/docker /var/www/html/wp-content/themes/docker
 
 # Add gallery plugin
-VOLUME /var/www/html/wp-content/plugins/custom-gallery-lite
-ADD ./wp-content/plugins/post-gallery-lite /var/www/html/wp-content/plugins/custom-gallery-lite
+VOLUME /var/www/html/wp-content/plugins/post-gallery-lite
+ADD ./wp-content/plugins/post-gallery-lite /var/www/html/wp-content/plugins/post-gallery-lite
 
 # Database default settings
 RUN sed -i "s/define('DB_CHARSET', 'utf8');/\/\/define('DB_CHARSET', 'utf8');/g" /usr/src/wordpress/wp-config-sample.php
