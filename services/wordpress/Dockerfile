@@ -18,3 +18,4 @@ ADD ./wp-content/plugins/post-gallery-lite /var/www/html/wp-content/plugins/post
 # Database default settings
 RUN sed -i "s/define('DB_CHARSET', 'utf8');/\/\/define('DB_CHARSET', 'utf8');/g" /usr/src/wordpress/wp-config-sample.php
 RUN sed -i "s/define('DB_COLLATE', '');/\/\/define('DB_COLLATE', '');/g" /usr/src/wordpress/wp-config-sample.php
+RUN sed -i "s/define('WP_DEBUG', false);/define('WP_DEBUG', false);\$_SERVER['HTTPS'] = 'on';/g" /usr/src/wordpress/wp-config-sample.php
