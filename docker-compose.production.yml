@@ -11,22 +11,28 @@ services:
 
     wordpress:
         restart: always
-        # ports:
-        #     - ${HUMBLE_PORT}:80
 
+    cache:
+        image: nginx:1.11
+        volumes:
+            - ./services/cache/config/nginx.conf:/etc/nginx/nginx.conf
+            - ${HUMBLE_DATA}/production/proxy-cache:/tmp/nginx
+        links:
+            - wordpress:app
+        mem_limit: ${MEM_LIMIT_CACHE}
+        restart: always
 
     proxy:
         image: nginx:1.11
         volumes:
-            - ./services/nginx/config/nginx.conf:/etc/nginx/nginx.conf
-            - ./services/nginx/config/server-configs-nginx:/etc/nginx/server-configs-nginx
-            # - ./services/nginx/config/h5bp:/etc/nginx/h5bp
-            - ${HUMBLE_DATA}/production/proxy-cache:/tmp/nginx
+            - ./services/proxy/config/nginx.conf:/etc/nginx/nginx.conf
+            - ./services/proxy/config/server-configs-nginx:/etc/nginx/server-configs-nginx
             - ${HUMBLE_DATA}/production/wp-content:/var/www/static/wp-content
             - ./services/wordpress/wp-content/themes/docker:/var/www/static/wp-content/themes/docker
             - ./services/wordpress/wp-content/plugins/post-gallery-lite:/var/www/static/wp-content/plugins/post-gallery-lite
         links:
-            - wordpress:wordpress
+            - ${PROXY_TO}:app
         ports:
             - ${HUMBLE_PORT}:80
+        mem_limit: ${MEM_LIMIT_PROXY}
         restart: always
