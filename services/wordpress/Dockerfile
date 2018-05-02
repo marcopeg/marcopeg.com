@@ -2,7 +2,7 @@
 # Wordpress for Production
 # by @24HR
 
-FROM wordpress:4.7
+FROM wordpress:4.9.5
 ADD conf/mpm_prefork.conf /etc/apache2/mods-enabled/
 ADD conf/apache2.conf /etc/apache2/apache2.conf
 ADD conf/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
