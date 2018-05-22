@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+
+    storage:
+        volumes:
+            - ${HUMBLE_DATA:-./data}/production/mysql-data:/var/lib/mysql
+            - ${HUMBLE_DATA:-./data}/production/wp-content:/var/www/html/wp-content
+
+    mysql:
+        restart: always
+
+    wordpress:
+        restart: always

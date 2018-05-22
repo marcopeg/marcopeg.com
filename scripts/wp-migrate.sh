@@ -2,8 +2,11 @@
 # Migrate Wordpress Database
 #
 
+WP_MIGRATE_FROM=${WP_MIGRATE_FROM:-$2}
+WP_MIGRATE_TO=${WP_MIGRATE_TO:-$3}
+
 if [ "" == "$WP_MIGRATE_TO" ]; then
-    WP_MIGRATE_TO="http://localhost:$HUMBLE_PORT"
+    WP_MIGRATE_TO="http://localhost:${HUMBLE_PORT:-8080}"
 fi
 
 if [ "" == "$WP_MIGRATE_FROM" ]; then

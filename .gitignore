@@ -6,5 +6,5 @@
 # Ignore data folder common files
 /data/development/*
 /data/production/*
-/data/backup/development.*
-/data/backup/production.*
+/data/backup/dev*
+/data/backup/prod*
