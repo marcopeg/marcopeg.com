@@ -1,11 +1,11 @@
-version: '2'
+version: '2.1'
 services:
 
     storage:
         image: busybox:1.25
         volumes:
-            - ${HUMBLE_DATA}:/data
-            - ${HUMBLE_BACKUP}:/backup
+            - ${HUMBLE_DATA:-./data}:/data
+            - ${HUMBLE_BACKUP:-./data/backup}:/backup
             - ./services/mysql/my.cnf:/etc/mysql/my.cnf
 
     mysql:
@@ -15,19 +15,19 @@ services:
         environment:
             - MYSQL_ROOT_PASSWORD=root
             - MYSQL_DATABASE=wordpress
-        mem_limit: ${MEM_LIMIT_MYSQL}
+        mem_limit: ${MEM_LIMIT_MYSQL:-64m}
 
     wordpress:
         build: ./services/wordpress
         links:
             - mysql:mysql
         ports:
-            - ${HUMBLE_PORT}:80
+            - ${HUMBLE_PORT:-8080}:80
         volumes_from:
             - storage
         environment:
             - WORDPRESS_DB_PASSWORD=root
-        mem_limit: ${MEM_LIMIT_APACHE}
+        mem_limit: ${MEM_LIMIT_APACHE:-96m}
 
     humble:
         image: marcopeg/humble:2.0.0

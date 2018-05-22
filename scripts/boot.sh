@@ -2,7 +2,7 @@
 # HUMBLE_URL
 # may be defined by the environment file
 if [ -z "$HUMBLE_URL" ]; then
-    HUMBLE_URL=${3:-"http://localhost:$HUMBLE_PORT"}
+    HUMBLE_URL=${3:-"http://localhost:${HUMBLE_PORT:-8080}"}
 fi
 
 humble info
