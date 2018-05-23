@@ -2694,6 +2694,31 @@ a.thumbnail.active {
     background: #f5b11d;
     color: #fff; }
 
+.post-paginate-links {
+  display: block;
+  text-align: center;
+  margin: 50px 0; }
+  .post-paginate-links .page-numbers {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #eaeaea;
+    display: inline-block;
+    line-height: 30px;
+    color: #484848;
+    margin: 0 2px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease; }
+    .post-paginate-links .page-numbers.current, .post-paginate-links .page-numbers:hover {
+      background: #f5b11d;
+      border-color: #f5b11d;
+      color: #fff; }
+    .post-paginate-links .page-numbers.dots {
+      border-color: transparent; }
+    .post-paginate-links .page-numbers.next, .post-paginate-links .page-numbers.prev {
+      border-color: transparent;
+      width: auto;
+      padding: 0 10px; }
+
 .post {
   max-width: 700px;
   margin: 50px auto 100px auto; }

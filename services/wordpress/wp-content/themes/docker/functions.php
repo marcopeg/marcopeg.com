@@ -23,6 +23,13 @@ function custom_field_has_value($name) {
     return false;
 }
 
+// LN add posts pagination in the home page
+function docker_pre_get_posts($query){
+    if(is_front_page()):
+        $query->set( 'posts_per_page', 5 );
+    endif;
+}
+add_action('pre_get_posts', 'docker_pre_get_posts', 10);
 /*
 add_action( 'pre_get_posts', 'docker_pre_get_posts');
 function docker_pre_get_posts( $query ) {

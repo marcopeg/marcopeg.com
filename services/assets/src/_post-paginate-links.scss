@@ -1,0 +1,36 @@
+
+$color: $brand-secondary;
+
+.post-paginate-links {
+    display: block;
+    text-align: center;
+    margin: 50px 0;
+
+    .page-numbers {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $gray-lighter;
+        display: inline-block;
+        line-height: 30px;
+        color: $text-color;
+        margin: 0 2px;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+
+        &.current, &:hover {
+            background: $color;
+            border-color: $color;
+            color: #fff;
+        }
+
+        &.dots {
+            border-color: transparent;
+        }
+        
+        &.next, &.prev {
+            border-color: transparent;
+            width: auto;
+            padding: 0 10px;
+        }
+    }
+}
