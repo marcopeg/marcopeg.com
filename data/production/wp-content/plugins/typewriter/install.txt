@@ -1,0 +1,11 @@
+Simple Install
+
+1. Login to WordPress and go to Plugins > Add New > Upload
+2. Upload typewriter.zip and activate
+3. Write using Markdown!
+
+Manual Install
+
+1. Upload the typewriter folder to your /wp-content/plugins/ directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Write using Markdown!

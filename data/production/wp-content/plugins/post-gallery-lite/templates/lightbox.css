@@ -1,0 +1,32 @@
+/**
+ * PostGalleryLite
+ */
+
+.post-gallery-lite--lightbox {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-gallery-lite--lightbox:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.post-gallery-lite__item--lightbox a {
+    float: left;
+    margin: 5px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform .1s ease;
+}
+
+.post-gallery-lite__item--lightbox a:hover {
+    transform: scale(1.1);
+}
+
+.post-gallery-lite__item--lightbox img {
+    margin: 0;
+}

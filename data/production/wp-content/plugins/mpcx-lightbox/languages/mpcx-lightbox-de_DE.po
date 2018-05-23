@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lightbox\n"
+"POT-Creation-Date: 2018-01-15 07:08+0100\n"
+"PO-Revision-Date: 2018-01-15 07:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: Stefan Hüsges\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: public\n"
+
+#: admin/options.php:33 admin/options.php:38 admin/options.php:70
+msgid "Title"
+msgstr "Titel"
+
+#: admin/options.php:37
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+#: admin/options.php:39
+msgid "Description"
+msgstr "Beschreibung"
+
+#: admin/options.php:40
+msgid "Caption"
+msgstr "Beschriftung"
+
+#: admin/options.php:45
+msgid "Gallery"
+msgstr "Galerie"
+
+#: admin/options.php:49 admin/options.php:61
+msgid "Disable"
+msgstr "Deaktivieren"
+
+#: admin/options.php:53
+msgid "Disabled lightbox support for gallery."
+msgstr "Deaktiviert die Lightbox-Unterstützung für die Galerie."
+
+#: admin/options.php:57
+msgid "Standalone Images"
+msgstr "Einzelbilder"
+
+#: admin/options.php:65
+msgid "Disabled lightbox support for standalone images."
+msgstr "Deaktiviert die Lightbox-Unterstützung für Einzelbilder."
+
+#: admin/options.php:74
+msgid "Activates ajax for title support of standalone images."
+msgstr "Aktiviert Ajax für die Titelunterstützung von Einzelbildern."
+
+#: admin/options.php:82
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: admin/options.php:90
+msgid "Row Height"
+msgstr "Zeilenhöhe"
+
+#: admin/options.php:94
+msgid "The preferred height of rows in pixel."
+msgstr "Die bevorzugte Höhe der Zeilen in Pixel."
+
+#: admin/options.php:99
+msgid "Margins"
+msgstr "Ränder"
+
+#: admin/options.php:103
+msgid "Decide the margins between the images."
+msgstr "Die Ränder zwischen den Bildern."
+
+#: admin/options.php:108
+msgid "Captions"
+msgstr "Bildunterschriften"
+
+#: admin/options.php:112
+msgid ""
+"Decide if you want to show the caption or not, that appears when your mouse "
+"is over the image."
+msgstr "Bildunterschrift angezeigen, wenn die Maus auf dem Bild ist."
+
+#: admin/options.php:117
+msgid "Randomize"
+msgstr "Zufällig"
+
+#: admin/options.php:121
+msgid "Automatically randomize or not the order of photos."
+msgstr "Ordnet die Reihenfolge der Bilder automatisch  zufällig an."
+
+#: mpcx-lightbox.php:97
+msgid "Settings"
+msgstr "Einstellungen"
+
+#~ msgid "Enable lightbox support for gallery."
+#~ msgstr "Aktiviert die Lightbox-Unterstützung für die Galerie."
+
+#~ msgid "Enable lightbox support for standalone images."
+#~ msgstr "Aktiviert die Lightbox-Unterstützung für die Einzelbilder."
+
+#~ msgid "Activates ajax for title support of non gallery images."
+#~ msgstr ""
+#~ "Aktiviert Ajax für die Titelunterstützung von Nicht-Galerie-Bildern."
+
+#~ msgid "Enable ajax for standalone image title support."
+#~ msgstr "Aktiviert Ajax für die Titelunterstützung von Einzelbildern."
+
+#~ msgid "Ajax"
+#~ msgstr "Ajax"
+
+#~ msgid "Enable this for title support."
+#~ msgstr "Aktivieren Sie dies für die Titelunterstützung."
+
+#~ msgid "Enable lightbox support for Gallery."
+#~ msgstr "Aktivieren Sie die Lightbox-Unterstützung für die Galerie."
+
+#~ msgid "Enable lightbox support for Standalone Images."
+#~ msgstr "Aktivieren Sie die Lightbox-Unterstützung für Einzelbilder."
+
+#~ msgid "Enable this option for title support at standalone images."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Option für die Titelunterstützung bei Einzelbildern."
