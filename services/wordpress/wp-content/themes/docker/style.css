@@ -2694,11 +2694,11 @@ a.thumbnail.active {
     background: #f5b11d;
     color: #fff; }
 
-.docker_paginate_links {
+.post-paginate-links {
   display: block;
   text-align: center;
   margin: 50px 0; }
-  .docker_paginate_links .page-numbers {
+  .post-paginate-links .page-numbers {
     width: 30px;
     height: 30px;
     border: 1px solid #eaeaea;
@@ -2708,13 +2708,13 @@ a.thumbnail.active {
     margin: 0 2px;
     transition: all .3s ease;
     -webkit-transition: all .3s ease; }
-    .docker_paginate_links .page-numbers.current, .docker_paginate_links .page-numbers:hover {
+    .post-paginate-links .page-numbers.current, .post-paginate-links .page-numbers:hover {
       background: #f5b11d;
       border-color: #f5b11d;
       color: #fff; }
-    .docker_paginate_links .page-numbers.dots {
+    .post-paginate-links .page-numbers.dots {
       border-color: transparent; }
-    .docker_paginate_links .page-numbers.next, .docker_paginate_links .page-numbers.prev {
+    .post-paginate-links .page-numbers.next, .post-paginate-links .page-numbers.prev {
       border-color: transparent;
       width: auto;
       padding: 0 10px; }

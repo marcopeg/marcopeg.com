@@ -26,7 +26,7 @@
         // add paging
         global $wp_query;
         if( $wp_query->max_num_pages > 1 ): ?>
-        <div class="docker_paginate_links">
+        <div class="post-paginate-links">
         <?php
           $big = 999999999; // need an unlikely integer
           echo paginate_links( array(
