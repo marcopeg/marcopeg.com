@@ -9,6 +9,10 @@ services:
             - ./services/wordpress/wp-content/plugins/post-gallery-lite:/var/www/html/wp-content/plugins/post-gallery-lite
             - ./services/assets:/usr/src/app
 
+    mysql:
+        ports:
+            - 3306:3306
+
     wordpress:
         build:
             context: ./services/wordpress/
